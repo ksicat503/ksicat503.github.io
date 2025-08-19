@@ -1,6 +1,6 @@
 ---
 layout: page
-title: projects
+title: hi, i'm Kevin Sicat
 ---
 
 hi, I'm Kevin Sicat. I am currently located in Central Jersey. 
