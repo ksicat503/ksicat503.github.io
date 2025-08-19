@@ -19,7 +19,6 @@ show_minimal: false             # remove all clutter
 
 navigation:                     # accepts {file, title, url, icon, sidebaricon}
   - {file: "projects.md", title: "Projects", sidebaricon: home}
-  - {file: "README.md", title: "About me", sidebaricon: address-card}
   - {file: "/Kevin_Michael_Sicat.pdf", title: "Resume", sidebaricon: home}
   
 
