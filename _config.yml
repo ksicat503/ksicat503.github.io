@@ -19,8 +19,6 @@ show_minimal: false             # remove all clutter
 
 navigation:                     # accepts {file, title, url, icon, sidebaricon}
   - {file: "projects.md", title: "Projects", sidebaricon: home}
-  # - {file: "resume.md", title: "Resume", sidebaricon: home}
-  
 
 external:                       # accepts {file, title, url, icon, sidebaricon}
   - {title: Mail, icon: envelope, url: "mailto:kevin.m.sicat@gmail.com"}
