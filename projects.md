@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Projects"
+title: Projects
 ---
 
 - [Golf Tracker App](https://github.com/ksicat503/golf-tracker)
