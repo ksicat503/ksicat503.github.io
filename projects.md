@@ -3,6 +3,8 @@ layout: default
 title: Projects
 ---
 
+# Projects
+
 - [Golf Tracker App](https://github.com/ksicat503/golf-tracker)
   - A GPS-based golf tracker with shot logging and club performance analysis.
  
