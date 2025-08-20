@@ -3,6 +3,6 @@ layout: page
 title: Resume
 ---
 
-<iframe src="./Kevin Michael Sicat.pdf" width="100%" height="800px"></iframe>
+<iframe src="{{ '/Kevin%20Michael%20Sicat.pdf' | relative_url }}" width="100%" height="800"></iframe>
 
-[Download Resume](./Kevin Michael Sicat.pdf)
+[Download Resume]({{ '/Kevin%20Michael%20Sicat.pdf' | relative_url }})
