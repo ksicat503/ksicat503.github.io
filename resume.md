@@ -4,6 +4,6 @@ title: Resume
 permalink: /resume/
 ---
 
-<iframe src="./resume.pdf" width="100%" height="800px"></iframe>
+<iframe src="./Kevin Michael Sicat.pdf" width="100%" height="800px"></iframe>
 
-[Download Resume](./resume.pdf)
+[Download Resume](./Kevin Michael Sicat.pdf)
