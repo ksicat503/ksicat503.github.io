@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: page
 title: Resume
+permalink: /resume/
 ---
 
-# Resume
+<iframe src="./resume.pdf" width="100%" height="800px"></iframe>
 
-<iframe src="./Kevin_Michael_Sicat.pdf" width="100%" height="800px"></iframe>
-
-[Download Resume](./Kevin_Michael_Sicat.pdf)
+[Download Resume](./resume.pdf)
