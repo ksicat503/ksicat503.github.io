@@ -3,17 +3,33 @@ layout: page
 title: Projects
 ---
 
-- [Golf Tracker App](https://github.com/ksicat503/golf-tracker)
-  - A GPS-based golf tracker with shot logging and club performance analysis.
- 
-- [Poker Player Analyzer](https://github.com/ksicat503/playerstat-explorer)
-  - Tool used to explore player hand histories to help with formulating strategy adjustments.
-
- - [A-Life](https://github.com/ksicat503/A-Life)
-   - A Python/Pygame artificial life simulation featuring biome environments, disasters, and intelligent organism movement for realistic ecosystem interactions.
-    
-- [BigShell](https://github.com/ksicat503/shell-implementation)
-  - A C-based Unix-like shell supporting job control, command parsing, and custom built-in functionality
- 
-- [Traceroute and Ping Utility](https://github.com/ksicat503/traceroute-ping-utility)
-  - A Python-based ping and traceroute utility built with raw sockets to construct, send, and parse ICMP packets
+<div class="projects-grid">
+  {% for project in site.data.projects %}
+  <article class="card">
+    <h2 class="card__title">
+      {% if project.in_progress %}
+        {{ project.title }}
+      {% else %}
+        <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.title }}</a>
+      {% endif %}
+    </h2>
+    <p class="card__description">{{ project.description }}</p>
+    {% if project.tags %}
+    <div class="card__tags">
+      {% for tag in project.tags %}
+      <span class="card__tag">{{ tag }}</span>
+      {% endfor %}
+      {% if project.in_progress %}<span class="card__tag card__tag--wip">In Progress</span>{% endif %}
+    </div>
+    {% endif %}
+    {% unless project.in_progress %}
+    <a class="card__link" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+      <svg aria-hidden="true" width="1em" height="1em">
+        <use href="{{ '/assets/fontawesome/icons.svg' | relative_url }}#github"></use>
+      </svg>
+      View on GitHub
+    </a>
+    {% endunless %}
+  </article>
+  {% endfor %}
+</div>

@@ -1,11 +1,15 @@
 ---
-layout: page
-title: hi, i'm Kevin Sicat
+layout: default
+title: Kevin Sicat
 ---
 
-I am currently located in Central Jersey. 
-
-I first earned a Bachelors degree from Rutgers University in Cell Biology and Neuroscience. I also obtained a Bachelors degree from Oregon State University in Computer Science.
-
-Feel free to check out [projects](projects.md) I have built or my [resume](./Kevin Michael Sicat.pdf)!
-
+<section class="hero">
+  <h1 class="hero__name">Kevin Michael Sicat</h1>
+  <br>
+  <!-- <p class="hero__subtitle">Computer Science &amp; Biology</p> -->
+  <div class="hero__bio">
+    <p>Backend and full-stack developer working on data-driven applications and everyday tools. Currently based in Central Jersey.
+        I enjoy taking unstructured problems and turning them into simple, reliable, and usable systems.</p>
+    <p>Explore my <a href="{{ '/projects/' | relative_url }}">projects</a> or view my <a href="{{ '/Kevin Michael Sicat.pdf' | relative_url }}" target="_blank" rel="noopener">resume</a>.</p>
+  </div>
+</section>

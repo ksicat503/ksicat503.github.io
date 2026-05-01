@@ -1,23 +1,34 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang }}">
-
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 {% include head.html %}
+<body>
+  <div class="site-wrapper">
+    <header class="site-header">
+      <a class="nav__brand" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        {% for item in site.navigation %}
+          {% assign node = site.pages | where: "name", item.file | first %}
+          {% assign nav_url = item.url | default: node.url %}
+          {% assign nav_title = item.title | default: node.title %}
+          <a class="nav__link" href="{{ nav_url | relative_url }}">{{ nav_title }}</a>
+        {% endfor %}
+        {% for item in site.external %}
+          <a class="nav__icon-link" href="{{ item.url }}" aria-label="{{ item.title }}"{% if item.url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
+            <svg aria-hidden="true" width="1.1em" height="1.1em">
+              <use href="{{ '/assets/fontawesome/icons.svg' | relative_url }}#{{ item.icon }}"></use>
+            </svg>
+          </a>
+        {% endfor %}
+      </nav>
+    </header>
 
-<header class="hover">
-  {% unless site.show_minimal and site.navigation and site.external %}
-    <h1 {% if site.navigation and site.external %}class="full"{% endif %}><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
-  {% endunless %}
-  {% include menu.html menu=site.navigation %}
-  {% include menu.html menu=site.external %}
-</header>
+    <main class="site-main">
+      {{ content }}
+    </main>
 
-{{ content }}
-
-{%- if site.footer -%}
-<footer class="hover">
-  <div>{{ site.description }}</div>
-  {% include menu.html menu=site.footer %}
-</footer>
-{%- endif -%}
-
+    <footer class="site-footer">
+      <small>{{ site.title }}</small>
+    </footer>
+  </div>
+</body>
 </html>
