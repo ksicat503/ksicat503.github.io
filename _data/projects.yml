@@ -1,6 +1,7 @@
 - title: "Beer Belly"
   description: "Beer journal and social discovery app with friend feeds, beer discovery, and AI-powered recommendations."
   url: "https://github.com/ksicat503/beerbelly"
+  app_url: "https://beerbelly.vercel.app"
   in_progress: true
   tags: [FastAPI, PostgreSQL, Next.js, Tailwind CSS, Claude API]
 
