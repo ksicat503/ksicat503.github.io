@@ -13,7 +13,7 @@ title: Projects
         <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.title }}</a>
       {% endif %}
     </h2>
-    <p class="card__description">{{ project.description }}</p>
+    <p class="card__description">{{ project.description }}{% if project.app_url %} <a href="{{ project.app_url }}" target="_blank" rel="noopener noreferrer">Try it here.</a>{% endif %}</p>
     {% if project.tags %}
     <div class="card__tags">
       {% for tag in project.tags %}
@@ -21,11 +21,6 @@ title: Projects
       {% endfor %}
       {% if project.in_progress %}<span class="card__tag card__tag--wip">In Progress</span>{% endif %}
     </div>
-    {% endif %}
-    {% if project.app_url %}
-    <a class="card__link" href="{{ project.app_url }}" target="_blank" rel="noopener noreferrer">
-      Try it here
-    </a>
     {% endif %}
     {% unless project.in_progress %}
     <a class="card__link" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
