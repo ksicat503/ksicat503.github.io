@@ -275,6 +275,12 @@
   flex-shrink: 0;
 }
 
+.org-logo--padded {
+  background-color: #fff;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
 .org-details {
   display: flex;
   flex-direction: column;
